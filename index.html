@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohan Cook | 3D Visualisation Portfolio</title>
+    <meta name="description" content="Minimalist Blender-based 3D visualisation portfolio for Rohan Cook." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/alte-haas-grotesk">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                <a class="logo site-title" href="#top">rohan cook</a>
+                <div class="site-subheading" style="font-size:1.25rem; color:#6d6e73; font-weight:400; margin-top:0.2em;">Personal Portfolio</div>
+            </div>
+            <div class="header-contact" style="font-size: 0.98em; color: #6d6e73; align-self: flex-end;">
+                <a href="mailto:hello@rohancook.com" style="color: #6d6e73; text-decoration: none;">hello@rohancook.com</a>
+                <span style="margin-left: 1.5em;">Perth, Western Australia</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <section id="work" class="section section-full gallery">
+            <div class="container gallery-shell">
+                <div class="gallery-header">
+                    <!-- Project Portfolio header removed -->
+                </div>
+
+                <div class="gallery-menu-frame">
+                    <div class="gallery-menu-viewport" role="list">
+                        <div class="gallery-menu fit-all">
+                        <button class="project-card tile-cabinet is-active" type="button" data-project="cabinet" role="listitem" aria-pressed="true">
+                            <div class="card-media" aria-hidden="true"></div>
+                            <div class="card-body">
+                                <span class="card-tag">Residential</span>
+                                <strong>Marri Timber Kitchen</strong>
+                                <span class="card-meta">Visualisation for Kitchen </span>
+                            </div>
+                        </button>
+                        <button class="project-card tile-common" type="button" data-project="common" role="listitem" aria-pressed="false">
+                            <div class="card-media" aria-hidden="true">
+                                <video class="card-video" src="0Portfolio ALL/Scarab Studio Wood Content Pack - Niche Trio/Niche Trio - Expand Loop.mov" autoplay muted loop playsinline></video>
+                            </div>
+                            <div class="card-body">
+                                <span class="card-tag">Product</span>
+                                <strong>Niche Box Trio</strong>
+                                <span class="card-meta">By Scarab Studio Wood</span>
+                            </div>
+                        </button>
+                        <button class="project-card tile-kitchen" type="button" data-project="kitchen" role="listitem" aria-pressed="false">
+                            <div class="card-media" aria-hidden="true">
+                                <img src="0Portfolio ALL/PROJECT3 - Western Honey Product and Packaging Render/Western Honey 1v2.png" alt="Western Honey Product Render" style="width:100%;height:100%;object-fit:cover;" />
+                            </div>
+                            <div class="card-body">
+                                <span class="card-tag">Product & Packaging</span>
+                                <strong>Western Honey</strong>
+                                <span class="card-meta">Product and Packaging </span>
+                            </div>
+                        </button>
+                        <button class="project-card tile-cafe" type="button" data-project="cafe" role="listitem" aria-pressed="false">
+                            <div class="card-media" aria-hidden="true">
+                                <img src="0Portfolio ALL/Project 4 - Exterior render/Cafe Image 2.jpg" alt="Cafe Exterior Architectural Visualisation" style="width:100%;height:100%;object-fit:cover;" />
+                            </div>
+                            <div class="card-body">
+                                <span class="card-tag">Architectural Visualisation</span>
+                                <strong>Cafe Exterior</strong>
+                                <span class="card-meta">Modern cafe concept</span>
+                            </div>
+                        </button>
+                        </div>
+                    </div>
+                    <!-- Navigation arrows removed for 4 items -->
+                </div>
+
+                <div class="gallery-detail" aria-live="polite">
+                    <article class="project-detail is-active" data-project="cabinet">
+                        <div class="detail-text">
+                            <header>
+                                <span class="card-tag">Residential</span>
+                                <h2>Marri Timber Kitchen</h2>
+                                <p class="card-meta">Visualisation for Kitchen Renovation</p>
+                            </header>
+                            <p>Modelled from the ground up using provided AutoCAD drawings, this project was created to communicate the planned renovation of a private kitchen and the palette options available. Custom timber material nodes were developed to accurately emulate West Australian timbers, ensuring the visualisation reflected both the design intent and the material authenticity.</p>
+                        </div>
+                        <div class="detail-gallery">
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT1 - Marri Timber Kitchen Render/cover.jpg" alt="Hero render of marri timber kitchen with large island" />
+                            </figure>
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT1 - Marri Timber Kitchen Render/Dining View.jpg" alt="Dining angle showing timber island and pendant lighting" />
+                            </figure>
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT1 - Marri Timber Kitchen Render/Lounge View.jpg" alt="Lounge perspective revealing kitchen integration" />
+                            </figure>
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT1 - Marri Timber Kitchen Render/close.jpg" alt="Close detail of brass tapware against marri timber" />
+                            </figure>
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT1 - Marri Timber Kitchen Render/Top Down.jpg" alt="Top-down view mapping layout and circulation" />
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="project-detail" data-project="common" hidden>
+                        <div class="detail-text">
+                            <header>
+                                <span class="card-tag">Product</span>
+                                <h2>Niche Box Trio</h2>
+                                <p class="card-meta">By Scarab Studio Wood</p>
+                            </header>
+                            <p>A polished 3D visualisation of a compound timber product designed by Scarab Studio Wood. This render set highlights the sculpted beauty of West Australian sheoak and jarrah while also revealing the interlocking mechanics. The geometry was developed from AutoCAD handover drawings and rebuilt in Blender.
+
+The final delivery included product variation stills, a looping exploded view, and a detailed product assembly animation. I find this type of work especially satisfying and would welcome the opportunity to take on more projects like it.</p>
+                        </div>
+                        <div class="detail-gallery">
+                            <figure class="detail-video">
+                                <video class="detail-video-player" src="0Portfolio ALL/Scarab Studio Wood Content Pack - Niche Trio/Niche Trio - Construction.mov" autoplay muted loop playsinline preload="auto" style="border-radius:5px;"></video>
+                            </figure>
+                            <figure class="detail-video">
+                                <video class="detail-video-player" src="0Portfolio ALL/Scarab Studio Wood Content Pack - Niche Trio/Niche Trio - Expand Loop.mov" autoplay muted loop playsinline preload="auto" style="border-radius:5px;"></video>
+                            </figure>
+                        </div>
+                    </article>
+                    </article>
+
+
+                        </div>
+                    </article>
+
+
+                    <article class="project-detail" data-project="kitchen" hidden>
+                        <div class="detail-text">
+                            <header>
+                                <span class="card-tag">Product & Packaging</span>
+                                <h2>Western Honey</h2>
+                                <p class="card-meta">Product and Packaging Visualisation</p>
+                            </header>
+                            <p>A set of product and packaging renders created for Western Honey as part of their brand presentation. The focus was on keeping the visuals simple and natural, with clean geometry, warm lighting, and careful material choices to reflect the product’s identity. These images were produced to support both marketing and client presentations, intended to showcase the project before production.</p>
+                        </div>
+                        <div class="detail-gallery">
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT3 - Western Honey Product and Packaging Render/Western Honey 1v2.png" alt="Western Honey Product Render 1" />
+                            </figure>
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT3 - Western Honey Product and Packaging Render/Western Honey 2v2.png" alt="Western Honey Product Render 2" />
+                            </figure>
+                            <figure>
+                                <img src="0Portfolio ALL/PROJECT3 - Western Honey Product and Packaging Render/western honey 3v2.png" alt="Western Honey Product Render 3" />
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="project-detail" data-project="lamp" hidden>
+                        <div class="detail-text">
+                            <header>
+                                <span class="card-tag">Architectural Visualisation</span>
+                                <h2>Cafe Exterior</h2>
+                                <p class="card-meta">Modern cafe facade and outdoor seating</p>
+                            </header>
+                            <p>This architectural visualisation presents a contemporary cafe exterior, defined by clean lines, expansive glass, and a welcoming outdoor seating area. The design balances natural textures and urban elements, creating an inviting space for social gatherings. The render highlights the interplay of sunlight, greenery, and modern architectural forms, making it ideal for client presentations and marketing materials.</p>
+                            
+                        <div class="detail-gallery">
+                            <figure>
+                                <img src="0Portfolio ALL/Project 4 - Exterior render/Cafe Image 1.png" alt="Cafe Exterior Architectural Visualisation" />
+                            </figure>
+                        </div>
+                        </div>
+                    </article>
+
+                    <article class="project-detail" data-project="cafe" hidden>
+                        <div class="detail-text">
+                            <header>
+                                <span class="card-tag">Architectural Visualisation</span>
+                                <h2>Cafe Exterior</h2>
+                                <p class="card-meta">Contemporary cafe facade and outdoor seating</p>
+                            </header>
+                            <p>
+                                Conceptual exterior visualisation modelled and rendered as an exercise in architural form and presentation. 
+                                Focus was given to the lighting, both natural and artifical, as it interacts with the curved forms and different materials in use.
+                            </p>
+                        </div>
+                        <div class="detail-gallery">
+                            <!-- Removed blank image box -->
+                            <figure>
+                                <img src="0Portfolio ALL/Project 4 - Exterior render/Cafe Image 2.jpg" alt="" />
+                            </figure>
+                            <figure>
+                                <img src="0Portfolio ALL/Project 4 - Exterior render/Cafe Image 3.png" alt="" />
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="contact-section">
+                <p class="eyebrow contact-heading">About</p>
+                                <div class="contact-intro">
+                    <p class="lead">I am an independent 3D artist and designer with a background in physical manufacturing. Over the past few years, I’ve developed a versatile skill set spanning product visualisation, concept development, and photorealistic architectural rendering. I welcome enquiries for projects of all sizes and will respond within 1–2 business days to discuss your needs in detail. I look forward to the possibility of working together.</p>
+                </div>
+
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:hello@rohancook.com">hello@rohancook.com</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Time zone</span>
+                        <span>UTC +8 (Perth, Western Australia)</span>
+                    </li>
+                    <li>
+                        <span class="contact-label">Skillset</span>
+                        <span>Blender 3D, Photoshop, Illustrator, DaVinci Resolve, AutoCAD, Fusion360</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.3em;">
+            <span class="logo">rohan cook</span>
+            <p style="margin: 0;">Freelance 3D visualisation | Blender + supporting tools.</p>
+            <p class="copyright" style="margin: 0;">&copy; <span id="year"></span> Rohan Cook. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true">
+        <figure class="lightbox-surface">
+            <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+            <img class="lightbox-image" src="" alt="" />
+            <figcaption class="lightbox-caption"></figcaption>
+        </figure>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

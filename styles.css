@@ -1,0 +1,784 @@
+﻿.detail-gallery figure:not(.detail-video) img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    border-radius: var(--radius);
+    transition: none;
+}
+.project-detail[data-project="cabinet"] .detail-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.2rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.project-detail[data-project="cabinet"] .detail-gallery figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-detail[data-project="cabinet"] .detail-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--radius);
+    max-height: 260px;
+}
+.detail-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    grid-column: 2 / 3 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 120% !important;
+    height: 120% !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+.detail-gallery .detail-video {
+    flex: 1 1 320px;
+    max-width: 50%;
+    min-width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .detail-gallery {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .detail-gallery .detail-video {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+.detail-gallery .detail-video:last-child .detail-video-player {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.gallery-menu-viewport,
+.gallery-menu-viewport.no-scroll {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    overflow-x: visible;
+    padding-inline: 0;
+}
+
+.gallery-menu.fit-all {
+    overflow-y: hidden;
+.gallery-menu-viewport {
+    overflow-y: hidden !important;
+}
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+@media (max-width: 1100px) {
+    .project-card {
+        width: clamp(180px, 32vw, 240px);
+        min-width: 180px;
+        height: clamp(220px, 40vw, 320px);
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-menu.fit-all {
+        gap: 1rem;
+    }
+    .project-card {
+        width: clamp(160px, 44vw, 220px);
+        min-width: 160px;
+        height: clamp(180px, 50vw, 260px);
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-menu.fit-all {
+        gap: 0.5rem;
+    }
+    .project-card {
+        width: 80vw;
+        min-width: 80vw;
+        height: 180px;
+        font-size: 0.92em;
+    }
+}
+:root {
+    --bg: #ffffff;
+    --fg: #0b0b0d;
+    --fg-soft: #1f1f23;
+    --muted: #6d6e73;
+    --accent: #131313;
+    --border: rgba(11, 11, 13, 0.1);
+    --container: 1200px;
+    --radius: 5px;
+    --transition: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--accent);
+}
+
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.45rem, 1vw, 0.6rem);
+}
+
+.section {
+    padding: 0;
+}
+
+.container {
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+main .container,
+.site-footer .footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-header {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: clamp(0.8rem, 2vw, 1.1rem) 0 clamp(0.25rem, 1vw, 0.4rem);
+}
+
+.logo {
+    font-family: 'Alte Haas Grotesk', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: 0.12em;
+    text-transform: lowercase;
+}
+
+.gallery.section {
+    min-height: 100vh;
+}
+
+.gallery-shell {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    padding: clamp(0.75rem, 2vw, 1.25rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.gallery-header {
+    max-width: none;
+    display: block;
+    gap: 0.5rem;
+    text-align: left;
+    margin-left: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 5vw;
+}
+
+.gallery-header .eyebrow {
+    margin: 0;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: left;
+    margin-left: 0;
+    display: inline-block;
+}
+
+.gallery-menu-frame {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    min-height: calc(min-content + 5vh);
+    height: auto;
+    width: 90vw;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.gallery-menu-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: stretch;
+    padding-inline: clamp(0.5rem, 2vw, 1.5rem);
+    scroll-snap-type: x proximity;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    min-height: min-content;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+.gallery-menu-viewport::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.gallery-menu {
+    display: flex;
+    align-items: stretch;
+    gap: clamp(1rem, 2.4vw, 1.8rem);
+    min-height: 100%;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 2vw, 1rem);
+    width: clamp(240px, 20vw, 280px);
+    height: clamp(360px, 68vh, 560px);
+    background: var(--bg);
+    border: none;
+    border-radius: var(--radius);
+    padding: clamp(0.9rem, 2.3vw, 1.2rem);
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: left;
+    scroll-snap-align: start;
+}
+
+.project-card .card-media {
+    flex: 0 0 auto;
+    width: 100%;
+    aspect-ratio: 1/5;
+    max-height: 380px;
+    min-height: 180px;
+    border-radius: var(--radius);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+    pointer-events: none;
+}
+
+.project-card .card-body {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.card-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.project-card strong {
+    font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.card-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.project-card:is(:hover, :focus-visible) {
+    transform: translateY(-6px);
+}
+
+.project-card.is-active {
+    transform: none;
+}
+
+.gallery-nav {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.gallery-nav span {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.gallery-nav:is(:hover, :focus-visible) {
+    border-color: var(--accent);
+}
+
+.gallery-nav:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.gallery-detail {
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.project-detail {
+    display: none;
+    gap: clamp(2rem, 4vw, 3rem);
+    align-items: start;
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: clamp(1.2rem, 3vw, 2rem);
+    min-height: 0;
+}
+
+.project-detail.is-active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+}
+
+.project-detail header {
+    margin-bottom: clamp(0.75rem, 2vw, 1.1rem);
+}
+
+.project-detail h2 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.project-detail p {
+    margin: 0 0 clamp(1rem, 3vw, 1.4rem);
+    max-width: 42ch;
+}
+
+.project-insights {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+    color: var(--fg-soft);
+    font-size: 0.95rem;
+}
+
+.project-insights li {
+    position: relative;
+    padding-left: 1.1rem;
+}
+
+.project-insights li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+}
+
+.detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.detail-gallery figure {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg);
+}
+.detail-gallery video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    background: transparent;
+    cursor: default;
+}
+
+.detail-video {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.detail-video figcaption {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+
+.detail-gallery img {
+    cursor: pointer;
+}
+
+.contact-section {
+    width: min(92vw, var(--container));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.65fr);
+    gap: clamp(1.5rem, 3.5vw, 2.4rem);
+    padding: clamp(0.4rem, 1vw, 0.65rem) 0 clamp(0.4rem, 1vw, 0.65rem);
+    align-items: start;
+    position: relative;
+    margin-bottom: clamp(3rem, 6vw, 4.4rem);
+}
+
+.contact-intro .eyebrow {
+    margin: 0 0 0.5rem;
+}
+
+.contact-intro h2 {
+    margin: 0 0 clamp(0.75rem, 2.5vw, 1.2rem);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+.lead {
+    margin: 0;
+    max-width: 46ch;
+    color: var(--fg-soft);
+}
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 2.5vw, 1.6rem) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.contact-list li {
+    display: grid;
+    gap: 0.4rem;
+    text-align: left;
+}
+
+.contact-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.site-footer {
+    padding: clamp(0.5rem, 1vw, 0.7rem) 0 clamp(0.6rem, 1.2vw, 0.9rem);
+    background: #f2f2f2;
+}
+
+.footer-grid {
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--muted);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.footer-grid .logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1.5rem, 6vw, 3rem);
+    background: rgba(11, 11, 13, 0.86);
+    z-index: 100;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-surface {
+    position: relative;
+    width: min(92vw, 1180px);
+    max-height: 90vh;
+    display: grid;
+    gap: 1rem;
+}
+
+.lightbox-image {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--radius);
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.lightbox-caption {
+    margin: 0;
+    color: #f3f4f6;
+    font-size: 0.95rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+@media (max-width: 1100px) {
+    .project-detail.is-active {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-gallery {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-menu-frame {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: clamp(360px, 70vh, 520px);
+    }
+
+    .gallery-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    main {
+        gap: clamp(0.4rem, 1vw, 0.55rem);
+    }
+
+    .gallery-shell {
+        padding-top: clamp(1.2rem, 6vw, 2rem);
+    }
+
+    .contact-section {
+    width: min(92vw, var(--container));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.65fr);
+    gap: clamp(1.5rem, 3.5vw, 2.4rem);
+    padding: clamp(0.4rem, 1vw, 0.65rem) 0 clamp(0.4rem, 1vw, 0.65rem);
+    align-items: start;
+    position: relative;
+    margin-bottom: clamp(3rem, 6vw, 4.4rem);
+}
+
+    .contact-intro {
+        text-align: center;
+    }
+
+    .contact-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .site-header .container {
+        justify-content: center;
+    }
+
+    .project-card {
+        width: clamp(240px, 72vw, 280px);
+    }
+
+    .gallery-menu {
+        gap: 1rem;
+    }
+
+    .project-detail {
+        padding: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .detail-gallery {
+        gap: 0.75rem;
+    }
+}
+
+
+.tile-cabinet .card-media {
+    background-image: url('0Portfolio ALL/PROJECT1 - Marri Timber Kitchen Render/cover.jpg');
+}
+
+.tile-common .card-media {
+    background-image: none;
+    background-color: #0f0f10;
+}
+
+.tile-kitchen .card-media {
+    background-image: url('0Portfolio ALL/Kitchen Final Renders/angle view.jpg');
+}
+
+.tile-lamp .card-media {
+    background-image: url('0Portfolio ALL/Lamp Concept.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tile-common .card-media .card-video {
+    transform: scale(1.05);
+    transform-origin: center;
+}
+
+
+.detail-video-player {
+    height: 70vh;
+    max-height: 70vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin-inline: auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+
+
+
+
+
+.contact-heading {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+    margin: 0 0 clamp(1rem, 3vw, 1.4rem);
+    font-family: 'Alte Haas Grotesk', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.12rem, 2.1vw, 1.54rem);
+    letter-spacing: 0.12em;
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
